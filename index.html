@@ -1,0 +1,41 @@
+
+<html>
+<head>
+  <title>Student Details</title>
+</head>
+<body>
+  <h1>JavaScript Class Method</h1>
+  <p>Student Details</p>
+
+  <p id="demo"></p>
+
+  <script>
+    class Student {
+      constructor(name, rno, address, mark) {
+        this.name = name;
+        this.rno = rno;
+        this.address = address;
+        this.mark = mark;
+      }
+    }
+    const students = [
+      new Student('lokitha', '29', 'Karur', '8.5 cgpa'),
+      new Student('krithi', '35', 'Coimbatore', '7.8 cgpa'),
+      new Student('saritha', '42', 'Chennai', '9.0 cgpa')
+    ];
+
+    let output = "";
+    students.forEach(student => {
+      output += `Name: ${student.name} <br>`;
+      output += `Roll No: ${student.rno} <br>`;
+      output += `Address: ${student.address} <br>`;
+      output += `Mark: ${student.mark} <br><br>`;
+    });
+    document.getElementById("demo").innerHTML = output;
+  </script>
+
+</body>
+</html>
+
+
+
